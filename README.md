@@ -1,4 +1,4 @@
-# GAR 
+# GAR: <strong>G</strong>eneralized <strong></strong>Associative <strong>R</strong>ecall
 
 This repository contains scripts used in our paper: generating GAR datasets, extracting truthfulness features, and training MLP models.
 
@@ -9,18 +9,22 @@ This repository contains scripts used in our paper: generating GAR datasets, ext
 - **GAR Framework**
 ![GAR](assets/GAR_framework.jpg "GAR")
 
-- **Vicuna Circuits For GAR**
+- **Vicuna Circuits For GAR: True/False Head and ICL Circuits**
 ![Circuits](assets/vicuna_circuits.jpg "Circuits")
 
 ## About
 
-<strong>C</strong>ompositional <strong>R</strong>elational <strong>R</strong>easoning (<strong>CRR</strong>) is a hallmark of human intelligence, but we lack a clear understanding of whether and how existing transformer large language models (LLMs) can solve CRR tasks. To enable systematic exploration of the CRR capability of LLMs, we first propose a new synthetic benchmark called <strong>G</strong>Generalized <strong>A</strong>Associative <strong>R</strong>ecall (<strong>GAR</strong>) by integrating and generalizing the essence of several tasks in mechanistic interpretability (MI) study in a unified framework. 
+<strong>C</strong>ompositional <strong>R</strong>elational <strong>R</strong>easoning (<strong>CRR</strong>) is a hallmark of human intelligence, but we lack a clear understanding of whether and how existing transformer large language models (LLMs) can solve CRR tasks. To enable systematic exploration of the CRR capability of LLMs, we first propose a new synthetic benchmark called <strong>G</strong>eneralized <strong>A</strong>ssociative <strong>R</strong>ecall (<strong>GAR</strong>) by integrating and generalizing the essence of several tasks in mechanistic interpretability (MI) study in a unified framework. 
 
 Evaluation shows that GAR is challenging enough for existing LLMs, revealing their fundamental deficiency in CRR. Meanwhile, it is easy enough for systematic MI study. Then, to understand how LLMs solve GAR tasks, we use attribution patching to discover the core circuits reused by Vicuna-33B across different tasks, and a set of vital attention heads. Intervention experiments show that the correct functioning of these heads significantly impacts task performance. Especially, we identify two classes of heads whose activations represent the abstract notion of true and false in GAR tasks respectively. They play fundamental roles in CRR across various models and tasks.
 
-The project structure is organized into several folders, each serving a specific purpose, as outlined below.
+## Connections with Improving Transformer Architecture
+
+Interestingly, this is the mechanistic interpretability work behind [**DCFormer**](https://arxiv.org/abs/2405.08553). It is the deficiency of existing LLMs on GAR that motivates us to identify weakness of MHA, and further improve attention by dynamically composing attention heads. 
 
 ## Folder Structure
+
+The project structure is organized into several folders, each serving a specific purpose, as outlined below.
 
 ```
 code_and_data
